@@ -8,4 +8,9 @@ public class SecretarioEmpleado implements Empleados {
 		return "Getionar la agenda de los jefes";
 	}
 
+	@Override
+	public String getInforme() {
+		return null;
+	}
+
 }

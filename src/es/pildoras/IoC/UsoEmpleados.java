@@ -15,7 +15,9 @@ public class UsoEmpleados {
 		Empleados juan = contexto.getBean("miEmpleado",Empleados.class);
 		
 		//3)Utilizar el Bean
-		System.out.print(juan.getTareas());
+		System.out.println(juan.getTareas());
+		
+		System.out.println(juan.getInforme());
 		
 		//4)Cerrar el xml
 		contexto.close();
