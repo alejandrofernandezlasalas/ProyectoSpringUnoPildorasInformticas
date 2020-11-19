@@ -14,9 +14,12 @@
 	</bean>
 
 	<bean id = "miEmpleado" class = "es.pildoras.IoC.JefeEmpleado">
-	
+		<!-- Creacion de la Dependencia con constructor-->
 		<constructor-arg ref = "miInforme"></constructor-arg>
 	</bean>
 
-
+	<bean id = "miSecretarioEmpleado" class = "es.pildoras.IoC.SecretarioEmpleado">
+		<!-- Creacion de la Dependencia con setter -->
+		<property name = "informeNuevo" ref = "miInforme"></property>
+	</bean>
 </beans>

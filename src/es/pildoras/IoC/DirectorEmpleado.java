@@ -5,7 +5,7 @@ public class DirectorEmpleado implements Empleados {
 	//Creacion de campo del tipo CreacionInforme(Interfaz)
 	private CreacionInforme informeNuevo;
 	
-	//Creacion de construcctor que inyecta la dependencia
+	//Creacion de construcctor que inyecta la dependencia(Constructor)
 	public DirectorEmpleado(CreacionInforme creacionInforme) {
 		this.informeNuevo = creacionInforme;
 	}
