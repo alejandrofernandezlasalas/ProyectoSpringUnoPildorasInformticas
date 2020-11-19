@@ -22,10 +22,16 @@ public class UsoEmpleados {
 
 		
 		//2)Pedirle al archivo xml el Bean, el objeto
-		Empleados maite = contexto.getBean("miSecretarioEmpleado",Empleados.class);
+		SecretarioEmpleado maite = contexto.getBean("miSecretarioEmpleado",SecretarioEmpleado.class);
 		
 		//3)Usar el Bean
+		System.out.println(maite.getTareas());
+		
 		System.out.println(maite.getInforme());
+		
+		//Inyectamos campos con Spring
+		System.out.println("Email: "+ maite.getEmail());
+		System.out.println(maite.getNombreEmpresa());
 		
 		//4)Cerrar el xml
 		contexto.close();

@@ -4,6 +4,25 @@ public class SecretarioEmpleado implements Empleados {
 
 	//Creacion de campo del tipo CreacionInforme(Interfaz)
 	private CreacionInforme informeNuevo;
+	
+	private String email;
+	private String nombreEmpresa;
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getNombreEmpresa() {
+		return nombreEmpresa;
+	}
+
+	public void setNombreEmpresa(String nombreEmpresa) {
+		this.nombreEmpresa = nombreEmpresa;
+	}
 
 	//Creacion de setter que inyeccta la dependencia(setter)
 	public void setInformeNuevo(CreacionInforme informeNuevo) {

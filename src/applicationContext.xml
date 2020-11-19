@@ -13,13 +13,24 @@
 	
 	</bean>
 
-	<bean id = "miEmpleado" class = "es.pildoras.IoC.JefeEmpleado">
+	<bean id = "miEmpleado" class = "es.pildoras.IoC.DirectorEmpleado">
 		<!-- Creacion de la Dependencia con constructor-->
 		<constructor-arg ref = "miInforme"></constructor-arg>
+		
+		<!-- Inyeccion de campos -->
+		<property name = "email" value = "equipoDirectivo@pildorasinformaticas.es"></property>
+		
+		<property name = "nombreEmpresa" value = "Pildoras Informaticas"></property>
 	</bean>
 
 	<bean id = "miSecretarioEmpleado" class = "es.pildoras.IoC.SecretarioEmpleado">
+		
 		<!-- Creacion de la Dependencia con setter -->
 		<property name = "informeNuevo" ref = "miInforme"></property>
+		
+		<!-- Inyeccion de campos -->
+		<property name = "email" value = "secretaria@pildorasinformaticas.es"></property>
+		
+		<property name = "nombreEmpresa" value = "Pildoras Informaticas"></property>
 	</bean>
 </beans>
