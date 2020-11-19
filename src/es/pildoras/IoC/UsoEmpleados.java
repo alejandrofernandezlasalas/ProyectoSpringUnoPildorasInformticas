@@ -1,19 +1,25 @@
 package es.pildoras.IoC;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class UsoEmpleados {
 
 	public static void main(String[] args) {
 		
-		// Creacion de objetos de tipo empleados
+		///Pasos a seguir para usar el contenedor Spring
+		//1)Crear un contexto
 		
-		Empleados empleado1 = new DirectorEmpleado();
+		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContext.xml");
+	
+		//2)Pedirle al archivo xml el Bean, el objeto
+		Empleados juan = contexto.getBean("miEmpleado",Empleados.class);
 		
+		//3)Utilizar el Bean
+		System.out.print(juan.getTareas());
 		
-		//Uso de los objetos creados
-		System.out.println(empleado1.getTareas());
-		
-		///Cada vez que quiero un objeto nuevo o presindir, tengo que modificar codigo en la aplicacion
+		//4)Cerrar el xml
+		contexto.close();
 	}
 	
-
 }
+
